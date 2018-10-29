@@ -20,6 +20,13 @@
 			canvas.getContext("2d").lineTo(endX+500,500-endY);
 			canvas.getContext("2d").stroke();
 		}
+		//anado senales cada 10px en los ejes como guia
+		for (var i = -500; i <= 500; i++) {
+			if (i%10==0) {
+				drawLine(i,-2,i,2);
+				drawLine(-2,i,2,i);
+			}
+		}
 	</script>
 </body>
 </html>
