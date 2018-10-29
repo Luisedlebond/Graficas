@@ -27,6 +27,15 @@
 				drawLine(-2,i,2,i);
 			}
 		}
+		//funcion para representar ecuaciones
+		function funcion(){
+			var Y=0;
+			for (var X = -500; X <= 500; X++) {
+				Y = X + 2*Math.pow(X,2);
+					drawLine(X,Y,X-1,Y);
+			}
+		}
+	funcion();
 	</script>
 </body>
 </html>
