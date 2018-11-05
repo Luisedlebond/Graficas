@@ -22,18 +22,23 @@
 		}
 		//anado senales cada 10px en los ejes como guia
 		for (var i = -500; i <= 500; i++) {
-			if (i%10==0) {
+			if (i%100==0) {
 				drawLine(i,-2,i,2);
 				drawLine(-2,i,2,i);
 			}
 		}
 		//funcion para representar ecuaciones
 		function funcion(){
-			var Y=0;
 			for (var X = -500; X <= 500; X++) {
-				Y = X + 2*Math.pow(X,2);
-					drawLine(X,Y,X-1,Y);
+				if (X%100==0) {
+					drawLine(X,ecuacion(X),X-100,ecuacion(X-100));
+				}
 			}
+		}
+		function ecuacion(x){
+			//y = (Math.pow(x, 5)-3*Math.pow(x, 3));
+			y=Math.pow(x, 2);
+			return y;
 		}
 	funcion();
 	</script>
